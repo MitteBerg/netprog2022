@@ -40,8 +40,8 @@ int main(int argc, char const* argv[])
         return 1;
     }
     printf("Connected to %s\n", argv[1]);
-    char buf[1024];
     
-         close(sockfd);
+    
+    close(sockfd);
     return 0;
     }
