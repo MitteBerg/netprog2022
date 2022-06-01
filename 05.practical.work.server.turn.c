@@ -73,8 +73,7 @@ char buf[1024];
         }
         printf("%s", buf);
     }
-    close(sockfd);
-    return 0;
+    
  
     
     close(clientfd);
