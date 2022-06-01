@@ -15,7 +15,6 @@ int main(int argc, char const* argv[])
     {
         printf("Usage: %s hostname\n", argv[0]);
         return 1;
-    
     }
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
     if(sockfd < 0)
@@ -25,11 +24,10 @@ int main(int argc, char const* argv[])
     }
     memset(&saddr, 0, sizeof(saddr));
     saddr.sin_family = AF_INET;
-    saddr.sin_port = htons(80);
+    saddr.sin_port = htons(8784);
     h = gethostbyname(argv[1]);
     if(h == NULL)
     {
-        
         printf("Unknown host\n");
         return 1;
     }
@@ -40,8 +38,6 @@ int main(int argc, char const* argv[])
         return 1;
     }
     printf("Connected to %s\n", argv[1]);
-    
-    
     close(sockfd);
     return 0;
-    }
+}
